@@ -8,11 +8,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ClassManagementSystem
 {
     public partial class TermTestMarks : Form
     {
+
+        int id = 0;
         public TermTestMarks()
         {
             InitializeComponent();
@@ -20,12 +23,18 @@ namespace ClassManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            id = id + 1;
+
+            string stname = StudentextBox1.Text;
             int module1 = int.Parse(textBoxModule1.Text);
             int module2 = int.Parse(textBoxModule2.Text);
             int module3 = int.Parse(textBoxModule3.Text);
             int total = module1 + module2 + module3;
             double average = Convert.ToDouble((module1 + module2 + module3)/3);
             string m1grade, m2grade, m3grade;
+
+
+
 
            //module 1
             if (module1 >= 80)
@@ -44,7 +53,7 @@ namespace ClassManagementSystem
             }
 
             else
-                m1grade = "f";
+                m1grade = "F";
 
           
 
@@ -67,7 +76,7 @@ namespace ClassManagementSystem
             }
 
             else
-                m2grade = "f";
+                m2grade = "F";
 
           
 
@@ -89,13 +98,50 @@ namespace ClassManagementSystem
             }
 
             else
-                m3grade = "f";
+                m3grade = "F";
 
 
-            
+            MessageBox.Show("Student Name:" +stname+ "\n" + "Module1 " + m1grade + "\n" +"Module2 " + m2grade + "\n" + "Module3 " + m3grade  +"\n" + "Total Marks: " + total + "\n" + "Average: " + average);
 
 
-            MessageBox.Show("Total Marks: " + total +"\n" + "Average: "+average+ "\n" + "Module1 " + m1grade + "\n" +"Module2 " + m2grade + "\n" + "Module3 " + m3grade);
+
+
+
+
+
+
+            //DB connection
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+
+            String query = "Insert into Module(StudentName,ModuleName,Marks,Grade) Values ('" +StudentextBox1.Text + "','" + Module1.Text + "','" + textBoxModule1.Text + "', '" + m1grade + "'),('" + StudentextBox1.Text + "','" + Module2.Text + "','" + textBoxModule2.Text + "', '" + m2grade + "'),('" + StudentextBox1.Text + "','" + Module3.Text + "','" + textBoxModule3.Text + "', '" + m3grade + "')";
+
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Record added successfully");
+
+
+            }
+
+            catch(SqlException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            finally
+            {
+                con.Close();
+            }
+
+
+
+
         }
     }
 }
