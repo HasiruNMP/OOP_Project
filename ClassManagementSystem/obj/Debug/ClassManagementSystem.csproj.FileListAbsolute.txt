@@ -11,7 +11,6 @@ C:\Users\PC\source\repos\ClassManagementSystem\ClassManagementSystem\obj\Debug\C
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\bin\Debug\ClassManagementSystem.exe.config
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\bin\Debug\ClassManagementSystem.exe
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\bin\Debug\ClassManagementSystem.pdb
-C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.csprojAssemblyReference.cache
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.Properties.Resources.resources
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.TermTestMarks.resources
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.csproj.GenerateResource.cache
