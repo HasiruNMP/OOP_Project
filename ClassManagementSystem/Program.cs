@@ -17,11 +17,10 @@ namespace ClassManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new studentfee());
-=======
+
+            
             Application.Run(new Portal());
->>>>>>> 416265374262a45d65242bfe2bc477f6e127d1db
+
         }
     }
 }

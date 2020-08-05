@@ -61,7 +61,7 @@ namespace student_management_system_semester_fee
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
-            String query = "Insert into SemesterFees(StudentNumber,DegreeProgram,Semester,Fee,PaymentStatu) Values ('" + StudentNumber.Text + "','" + Degreecombo.SelectedValue + "','" + semestercombo.SelectedValue + "', '" + feecombo.SelectedValue + "','"+paidstat+"')";
+            String query = "Insert into SemesterFees(StudentNumber,DegreeProgram,Semester,Fee,PaymentStatu) Values ('" + StudentNumber.Text + "','" + Degreecombo.SelectedItem + "','" + semestercombo.SelectedItem + "', '" + feecombo.SelectedItem + "','"+paidstat+"')";
             SqlCommand cmd = new SqlCommand(query, con);
 
             try
