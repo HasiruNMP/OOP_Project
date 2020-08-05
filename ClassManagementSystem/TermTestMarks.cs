@@ -115,7 +115,7 @@ namespace ClassManagementSystem
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
             String query = "Insert into Module(StudentName,ModuleName,Marks,Grade) Values ('" +StudentextBox1.Text + "','" + Module1.Text + "','" + textBoxModule1.Text + "', '" + m1grade + "'),('" + StudentextBox1.Text + "','" + Module2.Text + "','" + textBoxModule2.Text + "', '" + m2grade + "'),('" + StudentextBox1.Text + "','" + Module3.Text + "','" + textBoxModule3.Text + "', '" + m3grade + "')";
-
+            query += "Insert into MarksDetails(StudentName,TotalMarks,Average) Values('" + StudentextBox1.Text + "','" + total + "','" + average + "')";
 
             SqlCommand cmd = new SqlCommand(query, con);
 
@@ -140,7 +140,7 @@ namespace ClassManagementSystem
             }
 
 
-            Console.ReadKey();
+      
 
         }
     }
