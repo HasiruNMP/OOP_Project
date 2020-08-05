@@ -39,12 +39,12 @@
             this.Module2 = new System.Windows.Forms.Label();
             this.Module1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.studentid1 = new System.Windows.Forms.TextBox();
-            this.getmark = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.getmark = new System.Windows.Forms.Button();
+            this.studentid1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -157,21 +157,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Marks Details";
             // 
-            // label1
+            // button3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Student ID";
+            this.button3.Location = new System.Drawing.Point(234, 100);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 35);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Total and Average";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // studentid1
+            // button2
             // 
-            this.studentid1.Location = new System.Drawing.Point(113, 52);
-            this.studentid1.Name = "studentid1";
-            this.studentid1.Size = new System.Drawing.Size(181, 20);
-            this.studentid1.TabIndex = 1;
+            this.button2.Location = new System.Drawing.Point(389, 100);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 35);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Delete Record";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 191);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(656, 310);
+            this.dataGridView1.TabIndex = 3;
             // 
             // getmark
             // 
@@ -183,33 +195,21 @@
             this.getmark.UseVisualStyleBackColor = true;
             this.getmark.Click += new System.EventHandler(this.getmark_Click);
             // 
-            // dataGridView1
+            // studentid1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 191);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(656, 310);
-            this.dataGridView1.TabIndex = 3;
+            this.studentid1.Location = new System.Drawing.Point(113, 52);
+            this.studentid1.Name = "studentid1";
+            this.studentid1.Size = new System.Drawing.Size(181, 20);
+            this.studentid1.TabIndex = 1;
             // 
-            // button2
+            // label1
             // 
-            this.button2.Location = new System.Drawing.Point(223, 100);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 35);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Delete Record";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(333, 100);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 35);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Total and Average";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Student ID";
             // 
             // TermTestMarks
             // 
