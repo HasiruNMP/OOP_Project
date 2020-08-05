@@ -19,7 +19,13 @@ namespace ClassManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("123");
+            int stid = int.Parse(textBox1.Text);
+            int mod = int.Parse(textBox2.Text);
+            int asno = int.Parse(textBox3.Text);
+
+
+
+            MessageBox.Show(stid.ToString());
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using student_management_system_semester_fee;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,10 +16,7 @@ namespace ClassManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            
             Application.Run(new Portal());
-
         }
     }
 }
