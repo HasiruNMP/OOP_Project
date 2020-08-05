@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace ClassManagementSystem
 {
-    public partial class AssignmentSubs : Form
+    public partial class AssignmentSub : Form
     {
-        public AssignmentSubs()
+        public AssignmentSub()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("123")
         }
     }
 }
