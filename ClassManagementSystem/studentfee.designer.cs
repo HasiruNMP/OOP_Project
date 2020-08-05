@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.SemesterFee = new System.Windows.Forms.GroupBox();
+            this.Submit = new System.Windows.Forms.Button();
             this.feecombo = new System.Windows.Forms.ComboBox();
             this.semestercombo = new System.Windows.Forms.ComboBox();
             this.Semester = new System.Windows.Forms.Label();
             this.Degreecombo = new System.Windows.Forms.ComboBox();
-            this.NotPaid = new System.Windows.Forms.CheckBox();
-            this.Paid = new System.Windows.Forms.CheckBox();
             this.StudentNumber = new System.Windows.Forms.TextBox();
             this.PaymentStatus = new System.Windows.Forms.Label();
             this.Fee = new System.Windows.Forms.Label();
             this.DegreeProgram = new System.Windows.Forms.Label();
             this.studentNo = new System.Windows.Forms.Label();
-            this.Submit = new System.Windows.Forms.Button();
+            this.paid = new System.Windows.Forms.RadioButton();
+            this.notpaid = new System.Windows.Forms.RadioButton();
             this.SemesterFee.SuspendLayout();
             this.SuspendLayout();
             // 
             // SemesterFee
             // 
+            this.SemesterFee.Controls.Add(this.notpaid);
+            this.SemesterFee.Controls.Add(this.paid);
             this.SemesterFee.Controls.Add(this.Submit);
             this.SemesterFee.Controls.Add(this.feecombo);
             this.SemesterFee.Controls.Add(this.semestercombo);
             this.SemesterFee.Controls.Add(this.Semester);
             this.SemesterFee.Controls.Add(this.Degreecombo);
-            this.SemesterFee.Controls.Add(this.NotPaid);
-            this.SemesterFee.Controls.Add(this.Paid);
             this.SemesterFee.Controls.Add(this.StudentNumber);
             this.SemesterFee.Controls.Add(this.PaymentStatus);
             this.SemesterFee.Controls.Add(this.Fee);
@@ -64,6 +64,15 @@
             this.SemesterFee.TabIndex = 0;
             this.SemesterFee.TabStop = false;
             this.SemesterFee.Text = "Semester Fee";
+            // 
+            // Submit
+            // 
+            this.Submit.Location = new System.Drawing.Point(289, 258);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.TabIndex = 18;
+            this.Submit.Text = "Submit";
+            this.Submit.UseVisualStyleBackColor = true;
             // 
             // feecombo
             // 
@@ -114,27 +123,6 @@
             this.Degreecombo.Size = new System.Drawing.Size(152, 21);
             this.Degreecombo.TabIndex = 14;
             // 
-            // NotPaid
-            // 
-            this.NotPaid.AutoSize = true;
-            this.NotPaid.Location = new System.Drawing.Point(300, 198);
-            this.NotPaid.Name = "NotPaid";
-            this.NotPaid.Size = new System.Drawing.Size(64, 17);
-            this.NotPaid.TabIndex = 13;
-            this.NotPaid.Text = "NotPaid";
-            this.NotPaid.UseVisualStyleBackColor = true;
-            // 
-            // Paid
-            // 
-            this.Paid.AutoSize = true;
-            this.Paid.Location = new System.Drawing.Point(212, 198);
-            this.Paid.Name = "Paid";
-            this.Paid.Size = new System.Drawing.Size(47, 17);
-            this.Paid.TabIndex = 12;
-            this.Paid.Text = "Paid";
-            this.Paid.UseVisualStyleBackColor = true;
-            this.Paid.CheckedChanged += new System.EventHandler(this.Paid_CheckedChanged);
-            // 
             // StudentNumber
             // 
             this.StudentNumber.Location = new System.Drawing.Point(212, 38);
@@ -179,14 +167,27 @@
             this.studentNo.TabIndex = 0;
             this.studentNo.Text = "Student Number";
             // 
-            // Submit
+            // paid
             // 
-            this.Submit.Location = new System.Drawing.Point(289, 258);
-            this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
-            this.Submit.TabIndex = 18;
-            this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = true;
+            this.paid.AutoSize = true;
+            this.paid.Location = new System.Drawing.Point(212, 214);
+            this.paid.Name = "paid";
+            this.paid.Size = new System.Drawing.Size(46, 17);
+            this.paid.TabIndex = 19;
+            this.paid.TabStop = true;
+            this.paid.Text = "Paid";
+            this.paid.UseVisualStyleBackColor = true;
+            // 
+            // notpaid
+            // 
+            this.notpaid.AutoSize = true;
+            this.notpaid.Location = new System.Drawing.Point(298, 214);
+            this.notpaid.Name = "notpaid";
+            this.notpaid.Size = new System.Drawing.Size(66, 17);
+            this.notpaid.TabIndex = 20;
+            this.notpaid.TabStop = true;
+            this.notpaid.Text = "Not Paid";
+            this.notpaid.UseVisualStyleBackColor = true;
             // 
             // studentfee
             // 
@@ -211,13 +212,13 @@
         private System.Windows.Forms.Label PaymentStatus;
         private System.Windows.Forms.Label Fee;
         private System.Windows.Forms.ComboBox Degreecombo;
-        private System.Windows.Forms.CheckBox NotPaid;
-        private System.Windows.Forms.CheckBox Paid;
         private System.Windows.Forms.TextBox StudentNumber;
         private System.Windows.Forms.ComboBox semestercombo;
         private System.Windows.Forms.Label Semester;
         private System.Windows.Forms.ComboBox feecombo;
         private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.RadioButton notpaid;
+        private System.Windows.Forms.RadioButton paid;
     }
 }
 
