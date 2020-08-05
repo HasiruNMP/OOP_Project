@@ -15,28 +15,31 @@ namespace ClassManagementSystem
     public partial class TermTestMarks : Form
     {
 
-        
+
         public TermTestMarks()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
 
-            string stname = StudentextBox1.Text;
+
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            int stid = int.Parse(StudentextBox1.Text);
             int module1 = int.Parse(textBoxModule1.Text);
             int module2 = int.Parse(textBoxModule2.Text);
             int module3 = int.Parse(textBoxModule3.Text);
             int total = module1 + module2 + module3;
-            double average = Convert.ToDouble((module1 + module2 + module3)/3);
+            double average = Convert.ToDouble((module1 + module2 + module3) / 3);
             string m1grade, m2grade, m3grade;
 
 
 
 
-           //module 1
+            //module 1
             if (module1 >= 80)
             {
                 m1grade = "A";
@@ -55,7 +58,7 @@ namespace ClassManagementSystem
             else
                 m1grade = "F";
 
-          
+
 
 
 
@@ -78,7 +81,7 @@ namespace ClassManagementSystem
             else
                 m2grade = "F";
 
-          
+
 
 
             //moudle 3
@@ -101,7 +104,6 @@ namespace ClassManagementSystem
                 m3grade = "F";
 
 
-            MessageBox.Show("Student Name:" +stname+ "\n" + "Module1 " + m1grade + "\n" +"Module2 " + m2grade + "\n" + "Module3 " + m3grade  +"\n" + "Total Marks: " + total + "\n" + "Average: " + average);
 
 
 
@@ -114,8 +116,8 @@ namespace ClassManagementSystem
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
-            String query = "Insert into Module(StudentName,ModuleName,Marks,Grade) Values ('" +StudentextBox1.Text + "','" + Module1.Text + "','" + textBoxModule1.Text + "', '" + m1grade + "'),('" + StudentextBox1.Text + "','" + Module2.Text + "','" + textBoxModule2.Text + "', '" + m2grade + "'),('" + StudentextBox1.Text + "','" + Module3.Text + "','" + textBoxModule3.Text + "', '" + m3grade + "')";
-            query += "Insert into MarksDetails(StudentName,TotalMarks,Average) Values('" + StudentextBox1.Text + "','" + total + "','" + average + "')";
+            String query = "Insert into Module(StudentId,ModuleName,Marks,Grade) Values ('" + stid+ "','" + Module1.Text + "','" + textBoxModule1.Text + "', '" + m1grade + "'),('" + stid + "','" + Module2.Text + "','" + textBoxModule2.Text + "', '" + m2grade + "'),('" +  stid + "','" + Module3.Text + "','" + textBoxModule3.Text + "', '" + m3grade + "')";
+            query += "Insert into MarksDetails(StudentId,TotalMarks,Average) Values('" + stid+ "','" + total + "','" + average + "')";
 
             SqlCommand cmd = new SqlCommand(query, con);
 
@@ -129,7 +131,7 @@ namespace ClassManagementSystem
 
             }
 
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
                 Console.WriteLine(ex.ToString());
             }
@@ -140,8 +142,63 @@ namespace ClassManagementSystem
             }
 
 
-      
+
+
+
+        }
+
+        private void getmark_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+
+            String query = "Select ModuleName,Marks,Grade from Module where StudentId = '" + studentid1.Text+"' ";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            DataSet set = new DataSet();
+
+            adapter.Fill(set, "Module");
+            dataGridView1.DataSource = set.Tables["Module"];
+           
+
+
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+
+            String query = "delete from Module where StudentId = '" + studentid1.Text + "' ";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            DataSet set = new DataSet();
+
+            adapter.Fill(set, "Module");
+            dataGridView1.DataSource = set.Tables["Module"];
+
+
+            MessageBox.Show("Record Deleted Succesfully!");
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+
+            String query = "Select * from MarksDetails where StudentId = '" + studentid1.Text + "' ";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            DataSet set = new DataSet();
+
+            adapter.Fill(set, "MarksDetails");
+            dataGridView1.DataSource = set.Tables["MarksDetails"];
 
         }
     }
 }
+
+
