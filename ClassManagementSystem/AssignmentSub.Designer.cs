@@ -40,12 +40,16 @@
             this.btnashchk = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnasnsub);
             this.groupBox1.Controls.Add(this.label2);
@@ -58,20 +62,20 @@
             this.groupBox1.Size = new System.Drawing.Size(254, 426);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "`";
+            this.groupBox1.Text = "New Submission";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 195);
+            this.label3.Location = new System.Drawing.Point(38, 201);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Assignment Number";
+            this.label3.Text = "Status(Y/N)";
             // 
             // btnasnsub
             // 
-            this.btnasnsub.Location = new System.Drawing.Point(76, 255);
+            this.btnasnsub.Location = new System.Drawing.Point(71, 305);
             this.btnasnsub.Name = "btnasnsub";
             this.btnasnsub.Size = new System.Drawing.Size(103, 36);
             this.btnasnsub.TabIndex = 9;
@@ -82,16 +86,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 149);
+            this.label2.Location = new System.Drawing.Point(40, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Module Code";
+            this.label2.Text = "Assignment";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 103);
+            this.label1.Location = new System.Drawing.Point(43, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 4;
@@ -99,21 +103,21 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 192);
+            this.textBox3.Location = new System.Drawing.Point(107, 198);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 3;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 100);
+            this.textBox1.Location = new System.Drawing.Point(107, 106);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 146);
+            this.textBox2.Location = new System.Drawing.Point(107, 152);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
@@ -155,6 +159,22 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Student ID";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(65, 247);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Marks";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(107, 244);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 11;
+            // 
             // AssignmentSub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,5 +206,7 @@
         private System.Windows.Forms.Button btnashchk;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label5;
     }
 }
