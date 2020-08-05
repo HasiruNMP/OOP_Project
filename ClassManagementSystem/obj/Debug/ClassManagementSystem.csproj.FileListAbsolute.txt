@@ -18,3 +18,5 @@ C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassMa
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.exe
 C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.pdb
+C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\ClassManagementSystem.AssignmentSub.resources
+C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\obj\Debug\student_management_system_semester_fee.studentfee.resources
