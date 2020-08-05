@@ -15,7 +15,7 @@ namespace ClassManagementSystem
     public partial class TermTestMarks : Form
     {
 
-        int id = 0;
+        
         public TermTestMarks()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace ClassManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            id = id + 1;
+            
 
             string stname = StudentextBox1.Text;
             int module1 = int.Parse(textBoxModule1.Text);
