@@ -16,7 +16,7 @@ namespace ClassManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TermTestMarks());
+            Application.Run(new Portal());
         }
     }
 }
