@@ -39,7 +39,6 @@ namespace ClassManagementSystem
 
                 MessageBox.Show("Record added successfully");
 
-
             }
 
             catch (SqlException ex)
@@ -53,6 +52,23 @@ namespace ClassManagementSystem
             }
 
             MessageBox.Show(stid.ToString());
+        }
+
+        private void btnashchk_Click(object sender, EventArgs e)
+        {
+            int stid = int.Parse(textBox2.Text);
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+
+            String query = "Select Id,AddingProjects,SubmissionStatus,ProjectMarks from PrjectSubmission where ID = '" + stid + "' ";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            DataSet set = new DataSet();
+
+            adapter.Fill(set, "Assignment Submissions");
+            dataGridView1.DataSource = set.Tables["Assignment Submissions"];
+
+ 
         }
     }
 }
