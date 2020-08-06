@@ -35,9 +35,9 @@ namespace ClassManagementSystem
             string fac = comboBox1.Text;
             string date = dateTimePicker1.Text;
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
-            String query = "Insert into ExtraFac(Id,Facility,Date) Values ('" + stid + "','" + fac + "','" + date + "')";
+            String query = "insert into ExtraFac(StudentId,Facility,Date) Values ('" + stid + "','" + comboBox1.SelectedItem + "','" + dateTimePicker1.Value.Date + "')";
 
             SqlCommand cmd = new SqlCommand(query, con);
 
@@ -60,7 +60,7 @@ namespace ClassManagementSystem
                 con.Close();
             }
 
-            MessageBox.Show(stid.ToString());
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -69,13 +69,14 @@ namespace ClassManagementSystem
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
-            String query = "Select Id,Facility,Date from ExtraFacility where ID = '" + stid + "' ";
-
+            String query = "Select StudentId,Facility,Date from ExtraFac where StudentId = '" + stid + "' ";
+            
+            
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
             DataSet set = new DataSet();
 
-            adapter.Fill(set, "Extra Facility Usage");
-            dataGridView1.DataSource = set.Tables["Extra Facility Usage"];
+            adapter.Fill(set, "ExtraFac");
+            dataGridView1.DataSource = set.Tables["ExtraFac"];
 
 
         }
