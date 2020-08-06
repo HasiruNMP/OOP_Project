@@ -20,7 +20,8 @@ namespace ClassManagementSystem
 
         private void btnp_stu_Click(object sender, EventArgs e)
         {
-
+            var stdform = new StudentDetails();
+            stdform.Show();
         }
 
         private void btnp_asn_Click(object sender, EventArgs e)

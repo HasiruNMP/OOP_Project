@@ -32,12 +32,12 @@ namespace ClassManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
             int stid = int.Parse(textBox1.Text);
-            string fac = comboBox1.Text;
-            string date = dateTimePicker1.Text;
+            string fac = Convert.ToString(comboBox1.Text);
+            string date = Convert.ToString(dateTimePicker1.Value.Date);
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
-            String query = "insert into ExtraFac(StudentId,Facility,Date) Values ('" + stid + "','" + comboBox1.SelectedItem + "','" + dateTimePicker1.Value.Date + "')";
+            String query = "insert into ExtraFac(StudentId,Facility,Date) Values ('" + stid + "','" + fac + "','" + date + "')";
 
             SqlCommand cmd = new SqlCommand(query, con);
 
