@@ -42,10 +42,10 @@
             this.DegreeProgram = new System.Windows.Forms.Label();
             this.studentNo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.studentID = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.studentID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SemesterFee.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,7 +65,7 @@
             this.SemesterFee.Controls.Add(this.Fee);
             this.SemesterFee.Controls.Add(this.DegreeProgram);
             this.SemesterFee.Controls.Add(this.studentNo);
-            this.SemesterFee.Location = new System.Drawing.Point(2, 3);
+            this.SemesterFee.Location = new System.Drawing.Point(2, 6);
             this.SemesterFee.Name = "SemesterFee";
             this.SemesterFee.Size = new System.Drawing.Size(509, 369);
             this.SemesterFee.TabIndex = 0;
@@ -203,28 +203,20 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.studentID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(518, 13);
+            this.groupBox1.Location = new System.Drawing.Point(517, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(591, 359);
+            this.groupBox1.Size = new System.Drawing.Size(591, 369);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Check Semester Fees ";
             // 
-            // label1
+            // dataGridView1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Student ID";
-            // 
-            // studentID
-            // 
-            this.studentID.Location = new System.Drawing.Point(101, 32);
-            this.studentID.Name = "studentID";
-            this.studentID.Size = new System.Drawing.Size(205, 20);
-            this.studentID.TabIndex = 1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 114);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(554, 224);
+            this.dataGridView1.TabIndex = 3;
             // 
             // button1
             // 
@@ -236,23 +228,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // studentID
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 114);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(554, 224);
-            this.dataGridView1.TabIndex = 3;
+            this.studentID.Location = new System.Drawing.Point(101, 32);
+            this.studentID.Name = "studentID";
+            this.studentID.Size = new System.Drawing.Size(205, 20);
+            this.studentID.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Student ID";
             // 
             // studentfee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 582);
+            this.ClientSize = new System.Drawing.Size(1116, 377);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SemesterFee);
             this.Name = "studentfee";
-            this.Text = "Student Management System";
+            this.Text = "Payments";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SemesterFee.ResumeLayout(false);
             this.SemesterFee.PerformLayout();

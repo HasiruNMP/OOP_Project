@@ -108,7 +108,7 @@
             this.Controls.Add(this.btnp_asn);
             this.Controls.Add(this.btnp_stu);
             this.Name = "Portal";
-            this.Text = "Form1";
+            this.Text = "Student Management System 1.0";
             this.ResumeLayout(false);
             this.PerformLayout();
 

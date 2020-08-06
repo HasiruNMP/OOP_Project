@@ -37,7 +37,8 @@ namespace ClassManagementSystem
 
         private void btnp_ext_Click(object sender, EventArgs e)
         {
-
+            var extform = new ExtraFacility();
+            extform.Show();
         }
 
         private void btnp_pay_Click(object sender, EventArgs e)

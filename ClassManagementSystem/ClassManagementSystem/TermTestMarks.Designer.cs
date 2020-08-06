@@ -39,13 +39,13 @@
             this.Module2 = new System.Windows.Forms.Label();
             this.Module1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.module3marks = new System.Windows.Forms.Button();
+            this.module2marks = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.module1marks = new System.Windows.Forms.Button();
             this.studentid1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.module2marks = new System.Windows.Forms.Button();
-            this.module3marks = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -159,6 +159,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Marks Details";
             // 
+            // module3marks
+            // 
+            this.module3marks.Location = new System.Drawing.Point(342, 100);
+            this.module3marks.Name = "module3marks";
+            this.module3marks.Size = new System.Drawing.Size(95, 35);
+            this.module3marks.TabIndex = 7;
+            this.module3marks.Text = "Module3 Marks";
+            this.module3marks.UseVisualStyleBackColor = true;
+            this.module3marks.Click += new System.EventHandler(this.module3marks_Click);
+            // 
+            // module2marks
+            // 
+            this.module2marks.Location = new System.Drawing.Point(230, 100);
+            this.module2marks.Name = "module2marks";
+            this.module2marks.Size = new System.Drawing.Size(95, 35);
+            this.module2marks.TabIndex = 6;
+            this.module2marks.Text = "Module2 Marks";
+            this.module2marks.UseVisualStyleBackColor = true;
+            this.module2marks.Click += new System.EventHandler(this.module2marks_Click);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(452, 100);
@@ -203,26 +223,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Student ID";
             // 
-            // module2marks
-            // 
-            this.module2marks.Location = new System.Drawing.Point(230, 100);
-            this.module2marks.Name = "module2marks";
-            this.module2marks.Size = new System.Drawing.Size(95, 35);
-            this.module2marks.TabIndex = 6;
-            this.module2marks.Text = "Module2 Marks";
-            this.module2marks.UseVisualStyleBackColor = true;
-            this.module2marks.Click += new System.EventHandler(this.module2marks_Click);
-            // 
-            // module3marks
-            // 
-            this.module3marks.Location = new System.Drawing.Point(342, 100);
-            this.module3marks.Name = "module3marks";
-            this.module3marks.Size = new System.Drawing.Size(95, 35);
-            this.module3marks.TabIndex = 7;
-            this.module3marks.Text = "Module3 Marks";
-            this.module3marks.UseVisualStyleBackColor = true;
-            this.module3marks.Click += new System.EventHandler(this.module3marks_Click);
-            // 
             // TermTestMarks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +231,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "TermTestMarks";
-            this.Text = "Form1";
+            this.Text = "Exam Results";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
