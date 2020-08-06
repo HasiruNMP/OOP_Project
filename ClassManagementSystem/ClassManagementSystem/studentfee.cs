@@ -45,7 +45,7 @@ namespace student_management_system_semester_fee
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
             String query = "Select DegreeProgram,Semester,Fee,PaymentStatu from SemesterFees where StudentNumber = '" + studentID.Text + "' ";
 
@@ -73,7 +73,7 @@ namespace student_management_system_semester_fee
 
             //DB connection
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Documents\GitHub\OOP_Project\ClassManagementSystem\StudentMangementDB.mdf;Integrated Security=True;Connect Timeout=30");
 
             String query = "Insert into SemesterFees(StudentNumber,DegreeProgram,Semester,Fee,PaymentStatu) Values ('" +StudentNumber.Text + "','" + Degreecombo.SelectedItem + "','" + semestercombo.SelectedItem + "', '" + feecombo.SelectedItem + "','" + paystat+ "')";
 
