@@ -40,11 +40,12 @@
             this.Module1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.getmark = new System.Windows.Forms.Button();
+            this.module1marks = new System.Windows.Forms.Button();
             this.studentid1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.module2marks = new System.Windows.Forms.Button();
+            this.module3marks = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -144,10 +145,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.module3marks);
+            this.groupBox2.Controls.Add(this.module2marks);
             this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.getmark);
+            this.groupBox2.Controls.Add(this.module1marks);
             this.groupBox2.Controls.Add(this.studentid1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(478, 21);
@@ -159,23 +161,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(234, 100);
+            this.button3.Location = new System.Drawing.Point(452, 100);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 35);
             this.button3.TabIndex = 5;
             this.button3.Text = "Total and Average";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(389, 100);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 35);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Delete Record";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -185,15 +177,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(656, 310);
             this.dataGridView1.TabIndex = 3;
             // 
-            // getmark
+            // module1marks
             // 
-            this.getmark.Location = new System.Drawing.Point(113, 100);
-            this.getmark.Name = "getmark";
-            this.getmark.Size = new System.Drawing.Size(85, 35);
-            this.getmark.TabIndex = 2;
-            this.getmark.Text = "Get Marks";
-            this.getmark.UseVisualStyleBackColor = true;
-            this.getmark.Click += new System.EventHandler(this.getmark_Click);
+            this.module1marks.Location = new System.Drawing.Point(113, 100);
+            this.module1marks.Name = "module1marks";
+            this.module1marks.Size = new System.Drawing.Size(95, 35);
+            this.module1marks.TabIndex = 2;
+            this.module1marks.Text = "Module1 Marks";
+            this.module1marks.UseVisualStyleBackColor = true;
+            this.module1marks.Click += new System.EventHandler(this.getmark_Click);
             // 
             // studentid1
             // 
@@ -210,6 +202,26 @@
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Student ID";
+            // 
+            // module2marks
+            // 
+            this.module2marks.Location = new System.Drawing.Point(230, 100);
+            this.module2marks.Name = "module2marks";
+            this.module2marks.Size = new System.Drawing.Size(95, 35);
+            this.module2marks.TabIndex = 6;
+            this.module2marks.Text = "Module2 Marks";
+            this.module2marks.UseVisualStyleBackColor = true;
+            this.module2marks.Click += new System.EventHandler(this.module2marks_Click);
+            // 
+            // module3marks
+            // 
+            this.module3marks.Location = new System.Drawing.Point(342, 100);
+            this.module3marks.Name = "module3marks";
+            this.module3marks.Size = new System.Drawing.Size(95, 35);
+            this.module3marks.TabIndex = 7;
+            this.module3marks.Text = "Module3 Marks";
+            this.module3marks.UseVisualStyleBackColor = true;
+            this.module3marks.Click += new System.EventHandler(this.module3marks_Click);
             // 
             // TermTestMarks
             // 
@@ -243,11 +255,12 @@
         private System.Windows.Forms.Label Module1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button getmark;
+        private System.Windows.Forms.Button module1marks;
         private System.Windows.Forms.TextBox studentid1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button module3marks;
+        private System.Windows.Forms.Button module2marks;
     }
 }
 
