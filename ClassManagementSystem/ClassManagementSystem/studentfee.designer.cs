@@ -65,9 +65,9 @@
             this.SemesterFee.Controls.Add(this.Fee);
             this.SemesterFee.Controls.Add(this.DegreeProgram);
             this.SemesterFee.Controls.Add(this.studentNo);
-            this.SemesterFee.Location = new System.Drawing.Point(2, 6);
+            this.SemesterFee.Location = new System.Drawing.Point(12, 6);
             this.SemesterFee.Name = "SemesterFee";
-            this.SemesterFee.Size = new System.Drawing.Size(509, 369);
+            this.SemesterFee.Size = new System.Drawing.Size(395, 369);
             this.SemesterFee.TabIndex = 0;
             this.SemesterFee.TabStop = false;
             this.SemesterFee.Text = "Semester Fee";
@@ -75,7 +75,7 @@
             // notpaid
             // 
             this.notpaid.AutoSize = true;
-            this.notpaid.Location = new System.Drawing.Point(298, 214);
+            this.notpaid.Location = new System.Drawing.Point(298, 231);
             this.notpaid.Name = "notpaid";
             this.notpaid.Size = new System.Drawing.Size(66, 17);
             this.notpaid.TabIndex = 20;
@@ -86,7 +86,7 @@
             // paid
             // 
             this.paid.AutoSize = true;
-            this.paid.Location = new System.Drawing.Point(212, 214);
+            this.paid.Location = new System.Drawing.Point(212, 231);
             this.paid.Name = "paid";
             this.paid.Size = new System.Drawing.Size(46, 17);
             this.paid.TabIndex = 19;
@@ -96,7 +96,7 @@
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(289, 258);
+            this.Submit.Location = new System.Drawing.Point(243, 286);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(75, 23);
             this.Submit.TabIndex = 18;
@@ -110,7 +110,7 @@
             this.feecombo.Items.AddRange(new object[] {
             "300000",
             "250000"});
-            this.feecombo.Location = new System.Drawing.Point(212, 161);
+            this.feecombo.Location = new System.Drawing.Point(212, 178);
             this.feecombo.Name = "feecombo";
             this.feecombo.Size = new System.Drawing.Size(152, 21);
             this.feecombo.TabIndex = 17;
@@ -126,7 +126,7 @@
             "Second Year-Second Semester",
             "Third Year-First Semester",
             "Third Year-Second Semester"});
-            this.semestercombo.Location = new System.Drawing.Point(212, 124);
+            this.semestercombo.Location = new System.Drawing.Point(212, 141);
             this.semestercombo.Name = "semestercombo";
             this.semestercombo.Size = new System.Drawing.Size(152, 21);
             this.semestercombo.TabIndex = 16;
@@ -135,7 +135,7 @@
             // Semester
             // 
             this.Semester.AutoSize = true;
-            this.Semester.Location = new System.Drawing.Point(28, 124);
+            this.Semester.Location = new System.Drawing.Point(28, 141);
             this.Semester.Name = "Semester";
             this.Semester.Size = new System.Drawing.Size(51, 13);
             this.Semester.TabIndex = 15;
@@ -148,14 +148,14 @@
             "BSc (hons) Software Engineering",
             "BSc (hons) Computer Networks",
             "BSc (hons) Network Security"});
-            this.Degreecombo.Location = new System.Drawing.Point(212, 80);
+            this.Degreecombo.Location = new System.Drawing.Point(212, 97);
             this.Degreecombo.Name = "Degreecombo";
             this.Degreecombo.Size = new System.Drawing.Size(152, 21);
             this.Degreecombo.TabIndex = 14;
             // 
             // StudentNumber
             // 
-            this.StudentNumber.Location = new System.Drawing.Point(212, 38);
+            this.StudentNumber.Location = new System.Drawing.Point(212, 55);
             this.StudentNumber.Name = "StudentNumber";
             this.StudentNumber.Size = new System.Drawing.Size(152, 20);
             this.StudentNumber.TabIndex = 7;
@@ -163,7 +163,7 @@
             // PaymentStatus
             // 
             this.PaymentStatus.AutoSize = true;
-            this.PaymentStatus.Location = new System.Drawing.Point(28, 198);
+            this.PaymentStatus.Location = new System.Drawing.Point(28, 215);
             this.PaymentStatus.Name = "PaymentStatus";
             this.PaymentStatus.Size = new System.Drawing.Size(84, 13);
             this.PaymentStatus.TabIndex = 3;
@@ -172,7 +172,7 @@
             // Fee
             // 
             this.Fee.AutoSize = true;
-            this.Fee.Location = new System.Drawing.Point(28, 161);
+            this.Fee.Location = new System.Drawing.Point(28, 178);
             this.Fee.Name = "Fee";
             this.Fee.Size = new System.Drawing.Size(25, 13);
             this.Fee.TabIndex = 2;
@@ -181,7 +181,7 @@
             // DegreeProgram
             // 
             this.DegreeProgram.AutoSize = true;
-            this.DegreeProgram.Location = new System.Drawing.Point(28, 80);
+            this.DegreeProgram.Location = new System.Drawing.Point(28, 97);
             this.DegreeProgram.Name = "DegreeProgram";
             this.DegreeProgram.Size = new System.Drawing.Size(84, 13);
             this.DegreeProgram.TabIndex = 1;
@@ -191,7 +191,7 @@
             // studentNo
             // 
             this.studentNo.AutoSize = true;
-            this.studentNo.Location = new System.Drawing.Point(28, 38);
+            this.studentNo.Location = new System.Drawing.Point(28, 55);
             this.studentNo.Name = "studentNo";
             this.studentNo.Size = new System.Drawing.Size(58, 13);
             this.studentNo.TabIndex = 0;
@@ -203,7 +203,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.studentID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(517, 6);
+            this.groupBox1.Location = new System.Drawing.Point(413, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(591, 369);
             this.groupBox1.TabIndex = 1;
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 377);
+            this.ClientSize = new System.Drawing.Size(1012, 382);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SemesterFee);
             this.Name = "studentfee";
